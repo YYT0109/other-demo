@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    html,body{
+        width: 100%;
+        height: 100%;
+    }
+
+    body{
+        margin: 0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-image: radial-gradient(pink, #FF8888);
+    }
+
+    .heart{
+        width: 60px;
+        height: 60px;
+        background-color: tomato;
+        position: relative;
+        animation:beat .6s infinite ease-in;
+    }
+    .heart span{
+        position: absolute;
+        left: 15px;
+        right: 0;
+        top: 30px;
+        bottom: 0;
+        font-size: 18px;
+    }
+    .heart:before, .heart:after{
+        content:"";
+        position: absolute;
+        width: 60px; height: 60px;
+        background-color: tomato;
+        border-radius: 50%;
+    }
+    .heart:before{
+        left: 30px;
+    }
+
+    .heart:after{
+        top: -30px;
+    }
+
+    @keyframes beat{
+        0%{
+            transform:scale(1) rotate(-45deg);
+        }
+
+        40%{
+            transform:scale(1) rotate(-45deg);
+        }
+
+        55%{
+            transform:scale(1.3) rotate(-30deg);
+        }
+
+        70%{
+            transform:scale(1) rotate(-45deg);
+        }
+
+        85%{
+            transform:scale(1.3) rotate(-60deg);
+        }
+
+        100%{
+            transform:scale(1) rotate(-45deg);
+        }
+    }
+</style>
+<body>
+<div class="heart"><span>JLL</span></div>
+</body>
+</html>
